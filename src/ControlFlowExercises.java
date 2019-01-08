@@ -24,8 +24,12 @@ public class ControlFlowExercises {
         System.out.println();
         boolean conf = true;
         while(conf) {
-            System.out.println("Please enter grade");
+            System.out.println("Please enter grade (Maximum is 100)");
             int grade = keyboard.nextInt();
+            if(grade > 100){
+                System.out.println("Grade cannot be more than maximum (100)");
+                continue;
+            }
             keyboard.nextLine();
             gradeConverter(grade);
             System.out.println("Are you comfortable with this grade Y/N? ");
@@ -79,21 +83,53 @@ public class ControlFlowExercises {
     }
 
     private static void gradeConverter(int grade) {
-        char letterGrade;
-        if (grade>88){
-            letterGrade = 'A';
+        String letterGrade;
+        if (grade>90){
+            if(grade>=97){
+                letterGrade = "A+";
+            }
+            else if (grade>=93){
+                letterGrade = "A";
+            }
+            else{
+                letterGrade = "A-";
+            }
         }
         else if (grade>=80){
-            letterGrade = 'B';
+            if(grade>=87){
+                letterGrade = "B+";
+            }
+            else if (grade>=83){
+                letterGrade = "B";
+            }
+            else{
+                letterGrade = "B-";
+            }
         }
-        else if (grade>=67){
-            letterGrade = 'C';
+        else if (grade>=70){
+            if(grade>=77){
+                letterGrade = "C+";
+            }
+            else if (grade>=73){
+                letterGrade = "C";
+            }
+            else{
+                letterGrade = "C-";
+            }
         }
         else if (grade>=60){
-            letterGrade = 'D';
+            if(grade>=67){
+                letterGrade = "D+";
+            }
+            else if (grade>=63){
+                letterGrade = "D";
+            }
+            else{
+                letterGrade = "D-";
+            }
         }
         else {
-            letterGrade = 'F';
+            letterGrade = "F";
         }
         System.out.println("Grade is: " + letterGrade);
     }

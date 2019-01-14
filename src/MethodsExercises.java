@@ -6,11 +6,12 @@ public class MethodsExercises {
         System.out.println(Division(10, 2));
         System.out.println(Multiplication(25, 8));
         System.out.println(Modulus(15, 2));
-        //getInteger(1,10);
+        getInteger(1,10);
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please choose the amount of sides on your dice!");
         int userPrompt = keyboard.nextInt();
         dice(userPrompt,2);
+        factorial(10);
     }
     private static int Addition(int x, int y){
         return x+y;
@@ -74,6 +75,7 @@ public class MethodsExercises {
         for(int i = 2; i<=x; i++){
             total*=i;
             System.out.print(" x " + i);
+
         }
         System.out.println(" = " + total);
         return total;

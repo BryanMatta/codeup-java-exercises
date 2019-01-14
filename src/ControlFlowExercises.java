@@ -75,7 +75,7 @@ public class ControlFlowExercises {
         System.out.println("number | squared | cubed");
         System.out.println("------ | ------- | -----");
         for (int x = 1; x <= j; x++){
-            System.out.format("%-7d| ", x);
+            System.out.format("%-7s| ", "smafdlk");
             System.out.format("%-8d| ", (x*x));
             System.out.format("%-7d\n", (x*x*x));
         }
